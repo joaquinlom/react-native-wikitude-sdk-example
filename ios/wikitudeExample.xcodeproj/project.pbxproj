@@ -36,13 +36,6 @@
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "wikitudeExample-tvOS";
 		};
-		577DE7A824673DB8007E45B6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 577DE7A424673DB7007E45B6 /* WikitudeSdk.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 134814201AA4EA6300B7C361;
-			remoteInfo = WikitudeSdk;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -74,7 +67,6 @@
 		2D02E47B1E0B4A5D006451C7 /* wikitudeExample-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wikitudeExample-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* wikitudeExample-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "wikitudeExample-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		403C109AEAB0E5C73A5C9524 /* Pods-wikitudeExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wikitudeExample.release.xcconfig"; path = "Target Support Files/Pods-wikitudeExample/Pods-wikitudeExample.release.xcconfig"; sourceTree = "<group>"; };
-		577DE7A424673DB7007E45B6 /* WikitudeSdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WikitudeSdk.xcodeproj; path = "../node_modules/react-native-wikitude-sdk/ios/WikitudeSdk.xcodeproj"; sourceTree = "<group>"; };
 		57EDC292247990E4000EF42F /* libreact-native-wikitude-sdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libreact-native-wikitude-sdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57EDC29A2479A384000EF42F /* WikitudeSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WikitudeSDK.framework; sourceTree = "<group>"; };
 		70A3A674220EF8BA17703509 /* libPods-wikitudeExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wikitudeExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,14 +154,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		577DE7A524673DB7007E45B6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				577DE7A924673DB8007E45B6 /* libWikitudeSdk.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		647725D47877D1FAF85C28DD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,7 +168,6 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				577DE7A424673DB7007E45B6 /* WikitudeSdk.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -334,10 +317,6 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
-				{
-					ProductGroup = 577DE7A524673DB7007E45B6 /* Products */;
-					ProjectRef = 577DE7A424673DB7007E45B6 /* WikitudeSdk.xcodeproj */;
-				},
 			);
 			projectRoot = "";
 			targets = (
@@ -350,13 +329,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		577DE7A924673DB8007E45B6 /* libWikitudeSdk.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libWikitudeSdk.a;
-			remoteRef = 577DE7A824673DB8007E45B6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -589,6 +561,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wikitudeExample.app/wikitudeExample";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 			};
 			name = Debug;
 		};
@@ -609,6 +584,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wikitudeExample.app/wikitudeExample";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 			};
 			name = Release;
 		};
@@ -766,6 +744,9 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 			};
 			name = Debug;
 		};
@@ -793,6 +774,9 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 			};
 			name = Release;
 		};
@@ -819,6 +803,9 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wikitudeExample-tvOS.app/wikitudeExample-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 			};
 			name = Debug;
 		};
@@ -845,6 +832,9 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wikitudeExample-tvOS.app/wikitudeExample-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 			};
 			name = Release;
 		};

@@ -13,7 +13,7 @@
     "prop-types": "^15.7.2",
     "react": "16.11.0",
     "react-native": "0.62.2",
-    "react-native-wikitude-sdk": "github:joaquinlom/react-native-wikitude-sdk"
+    "react-native-wikitude-sdk": "git+https://github.com/joaquinlom/react-native-wikitude-sdk.git"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
