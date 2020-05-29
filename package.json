@@ -16,8 +16,8 @@
     "react-native-wikitude-sdk": "git+https://github.com/joaquinlom/react-native-wikitude-sdk.git"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/runtime": "^7.6.2",
+    "@babel/core": "^7.10.1",
+    "@babel/runtime": "^7.10.1",
     "@react-native-community/eslint-config": "^0.0.5",
     "babel-jest": "^24.9.0",
     "eslint": "^6.5.1",
