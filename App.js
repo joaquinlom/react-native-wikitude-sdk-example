@@ -8,56 +8,37 @@
 
 import React, {useEffect, useRef} from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
-import {WikitudeView} from 'react-native-wikitude-sdk';
-
-const config = {
-  licenseKey:
-    'SM77tH5TA9wTlRnJfaovgS3hDg0OjDbL9cn6A3Nv5Qbozpn+tuhDkBA6sVLPCj1YXt/u+A50ZAO4oIpORPcuZq5sivcE9TpEKibNvTs2O8y2POZXCCOLeoH9IXwOtbHgrdQxv8KIp4y0nWwzMX5J00pRUzbwUSvWoYg0GutYAKdTYWx0ZWRfX0pInanyhBWDZ6pUxiswXqcwN5/QdrrhDPI1MnmzNckZAU2zfgVEiTwmMgiJfOr6IccFYtkR5UnCk+4kpdIeCbupNmzMPjKNJdEMZ2woFQDuyKjchhMna4oSR8jktMlTyJbWYxKUZDiYiHTC6uYcpJjHG++PIv11uL6rVAZqBTqGYVnhKbdrY8RpxBIJh9wS4pWMo8mFDwO6Y58U8JOlm0G7BnsZtFN6fPoo+KYDW02J+QjLKrcHsYiloeShrjJQHGvCkknSNcBSkq7Yj87fDWCIqBf76cQCjq0kV4RZhKss8FC6d8DalZuahTm0mzWXMICJSrX8aweonAAWX5NJT6F8AyHicaXpZpM47WXJULkrChkGQ5AXUelhzwFKS3sivZIBegIcfKx8Ab9PFbhpbL0uVJ/rfc2nc2ryzkHLPYTx2wI0jXdgijvFiMyyJgVGV3LO+9wCrYv6o2zfRD68uhRBMDFNNUgrNiEF1Tmn/Pf4J3llher1bbI6QE/p+OWhW2jZWGBXeqKk0k5GLkJJpzIFklu/sODNBjfJt1K0BJkRuR1iQaA5hsstQakTUIBJ6Peuji4qWWXdPoczipGNglTOal3eqiac5qf54V1GO2SDoq+9gjpXYgEDVZOQ7gNLtwuheVHzlKoLCrUUxWBheZS2Gjn3MrAfrljqq/13MNcE3xysll6pob8=',
-  url: 'http://spinar-dev.com/wikitude/We3/principal/index.html',
-  //url: 'ARchitectExamples/07_3dModels_4_SnapToScreen/index',
-};
-
+import {NavigationContainer} from '@react-navigation/native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import Experiences from './Screens/ExperiencesPage';
+import About from './Screens/AboutPage';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+const Tab = createBottomTabNavigator();
 const App = () => {
-  const wikitudeView = useRef(null);
-
-  const onFinishLoading = event => {
-    // event.success = true
-    //This event is called when the html is finish loaded
-    //For fail event, use onFailLoading
-    console.log('On Finish Loading');
-  };
-  const onJsonReceived = object => {
-    console.log(object);
-  };
-
-  const onFailLoading = event =>{
-    console.log(event);
-  };
   return (
-    <SafeAreaView style={styles.container}>
-      <WikitudeView
-        ref={wikitudeView}
-        licenseKey={config.licenseKey}
-        url={config.url}
-        style={styles.AR}
-        onFailLoading={onFailLoading}
-        onJsonReceived={onJsonReceived}
-        onFinishLoading={onFinishLoading}
-      />
-    </SafeAreaView>
+    <NavigationContainer>
+      <Tab.Navigator
+        screenOptions={({route}) => ({
+          tabBarIcon: ({focused, color, size}) => {
+            let iconName;
+
+            if (route.name === 'Experiences') {
+              iconName = 'list';
+            } else if (route.name === 'About') {
+              iconName = 'info';
+            }
+
+            // You can return any component that you like here!
+            return <Icon name={iconName} size={size} color={color} />;
+          },
+        })}>
+        <Tab.Screen name="Experiences" component={Experiences} />
+        <Tab.Screen name="About" component={About} />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 };
 const styles = StyleSheet.create({
-  AR: {
-    position: 'absolute',
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    backgroundColor: 'transparent',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   container: {
     flex: 1,
     marginTop: 30,

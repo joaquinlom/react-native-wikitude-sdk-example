@@ -78,8 +78,10 @@ target 'wikitudeExample' do
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
 
+
   pod 'react-native-wikitude-sdk', :path => '../node_modules/react-native-wikitude-sdk'
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
   target 'wikitudeExampleTests' do
     inherit! :complete
     # Pods for testing

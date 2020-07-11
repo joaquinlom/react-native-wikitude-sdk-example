@@ -10,14 +10,26 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/bottom-tabs": "^5.6.1",
+    "@react-navigation/native": "^5.6.1",
+    "@react-navigation/stack": "^5.6.2",
     "prop-types": "^15.7.2",
     "react": "16.11.0",
     "react-native": "0.62.2",
+    "react-native-gesture-handler": "^1.6.1",
+    "react-native-navigation": "^6.9.0",
+    "react-native-reanimated": "^1.9.0",
+    "react-native-safe-area-context": "^3.0.7",
+    "react-native-screens": "^2.9.0",
+    "react-native-share": "^3.7.0",
+    "react-native-vector-icons": "^7.0.0",
+    "react-native-webview": "^10.1.0",
     "react-native-wikitude-sdk": "git+https://github.com/joaquinlom/react-native-wikitude-sdk.git"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.1",
-    "@babel/runtime": "^7.10.1",
+    "@babel/core": "^7.10.4",
+    "@babel/runtime": "^7.10.4",
     "@react-native-community/eslint-config": "^0.0.5",
     "babel-jest": "^24.9.0",
     "eslint": "^6.5.1",
